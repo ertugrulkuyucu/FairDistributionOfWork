@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<hr />
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <td>Ad Soyad</td>
+            <td>Görev</td>
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i = 0; i < Model.Count; i++)
+        {
+            var day = i + 1;
+            <td class="alert-danger">@day. Gün</td>
+
+        <tr>
+            @for (int a = 0; a < (Model.Count)*2; a += 2)
+            {
+            <tr>
+                <td>@Model[i][a]</td>
+                <td>@Model[i][a + 1]</td>
+            </tr>
+        }
+            </tr>
+
+        }
+        </tbody>
+    </table>
